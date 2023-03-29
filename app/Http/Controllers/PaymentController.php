@@ -11,15 +11,25 @@ class PaymentController extends Controller
     
        
         $mpesa = new \Explicador\E2PaymentsPhpSdk\Mpesa();
-        $mpesa->setClientId('98cd2d3b-5e4f-42e0-8c93-d01fc871b858');
-        $mpesa->setClientSecret('adazkz8CM456yLhzNQz4m3JOOmmFVEm3fHkrbDFh');
-        $mpesa->setWalletId('508517');// 'live' production environment 
+        $mpesa->setClientId('98ce725a-544b-4841-9304-74efef98534e');
+        $mpesa->setClientSecret('14bOAVyBNAcwp6qRK2aRwrDO1z7fjqSWUdEPL03J');
+        $mpesa->setWalletId('123523');// 'live' production environment 
       
-        $amount= 1200;
+        $amount= 10;
         $reference= 'CursoDoSegredo';
 
         $result = $mpesa->c2b($request->phone_number, $amount, $reference);
+ 
+        $status = $result->status;      
 
-        dd($result);
+       if($status==200){
+        $response = $result->response;
+         $successMessage = $response->success;
+        return view('done', array('sucess'=>$successMessage));
+       }else{
+      
+         $response = $result->response->error;
+         return view('error', array('error'=>$response));
+       }
     }
 }

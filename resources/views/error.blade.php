@@ -29,7 +29,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: #000000;
+        background: rgb(255, 44, 44);
     }
 
     :where(.container, form, .input-field, header) {
@@ -40,7 +40,7 @@
     }
 
     .container {
-        background: #000000;
+        background: #fff;
         padding: 30px 65px;
         border-radius: 12px;
         row-gap: 20px;
@@ -56,9 +56,9 @@
         border-radius: 50%;
     }
 
-    .container h4,h3 {
+    .container h4 {
         font-size: 1.25rem;
-        color: #ffffff;
+        color: #333;
         font-weight: 500;
     }
 
@@ -99,12 +99,12 @@
 
      form button {
          width: 100%;
-         color: #000;
+         color: #fff;
          font-size: 1rem;
          border: none;
          padding: 9px 0;
          border-radius: 6px;
-         background: #63F2B5;
+         background: #6e93f7;
         transition: all 0.2s ease;
     } 
 
@@ -113,18 +113,11 @@
 
 <body>
     <div class="container">
-     
-        <img style="width:56px; height:56;"src="{{ asset('logo.png')}}"/>
+        <header>
+            <i class="bx bxs-check-shield"></i>
+        </header>
         <h3>Curso O Segredo</h3>
-          <h4>Digite o seu Numero</h4>
-        <form action="/pay" method="post">
-            @csrf
-            <div class="input-field" style="margin-bottom: 16px">
-                <input type="number" name="phone_number" placeholder="84xxxxxx" />
-            </div>
-
-            <button type="submit">Efetuar o pagamento</button>
-        </form>
+           <h4>{{$error}}</h4>
     </div>
 </body>
 
