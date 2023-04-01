@@ -93,11 +93,11 @@
         pointer-events: auto;
     }
 
-    form button:hover {
+     button:hover {
         background: #0e4bf1;
     }
 
-     form button {
+      button {
          width: 100%;
          color: #fff;
          font-size: 1rem;
@@ -118,6 +118,8 @@
         </header>
         <h3>Curso O Segredo</h3>
            <h4>{{$error}}</h4>
+
+          <a href="/"><button type="submit">Tentar novamente</button></a>
     </div>
 </body>
 
