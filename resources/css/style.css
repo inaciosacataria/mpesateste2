@@ -1,0 +1,136 @@
+body {
+    background: #fff;
+    padding: 4rem;
+    color: orange; 
+}
+
+.container h6{
+    text-align: center;
+    
+}
+
+.container{
+    height: 80vh;
+}
+
+.container .form-control{
+    border: 2px solid orange;
+    color: rgb(251, 251, 251); 
+    background-color: #fff;
+}
+
+footer {
+    display: grid;
+    place-content: center;
+}
+
+footer .container {
+    text-align: center;
+    font-size: 1.5rem;
+    justify-self: center;
+}
+
+footer .container p {
+    font-size: .75rem;
+    color: rgb(199, 199, 199); 
+}
+
+
+.container-fluid .input-group{
+    border: 2px solid orange;
+    display: flex;
+    align-items: center;
+}
+.container-fluid .input-group-text{
+    border-radius: 50%;
+}
+
+/* styles for page 2  */
+
+.container .text-container {
+    color: white;
+    font-size: .8rem;
+}
+
+.container .text-container .text-box{
+    border-bottom: .1px solid rgb(199, 199, 199);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 10px;
+}
+
+.container .text-container .text-box  .group-text p{
+    align-items: flex-start;
+    margin: 1px; padding-bottom: 1px;
+}
+
+.container .text-container .text-box:nth-child(3){
+    border-bottom: none;
+}
+
+.container-fluid .input-group .fa-solid{
+    border-radius: 50%; 
+    padding: 5px 5.5px;   
+    font-weight: 700;
+    margin: 8px;
+    font-size: 1rem;
+    color:black; 
+    
+    background-color: orange;
+}
+
+.container .card .text-container {
+    margin-left: 7px;
+    color: white; 
+    display: flex;
+    font-size: .51rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.container .card .text-container p, .container .card .text-container h6 {
+    margin: 0; padding: 0; 
+    margin-left: 6px;
+    font-size: .7rem;
+}
+.container .card .text-container  img{
+    max-width: 28px;
+    height: max-content;
+
+}
+.card {
+    background-color: rgb(36, 36, 36);
+    margin: 3rem 0;
+}
+
+.container .card .container-fluid .input-group {
+    border-radius: 8px;   
+}
+
+.container .card .container-fluid .input-group .form-control{
+    background-color: inherit;
+
+}
+
+.container .card .container-fluid .input-group input[type="text"]::-webkit-input-placeholder {
+    color: rgb(106, 106, 106);     
+}
+
+/* .container .card .container-fluid .input-group input[placeholder]{
+    background-color: inherit;
+    color: green; 
+} */ 
+
+/* page 3 styles  */
+.video-container, button .btn-pg-3 {
+    display: flex;
+    justify-content: center;
+}
+
+.shield {
+    width: 20px;
+    margin-bottom: 8px;
+}
+
+

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\SubscribeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,18 +15,4 @@ use App\Http\Controllers\PaymentController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/error', function () {
-    return view('error');
-});
-
-
-Route::get('/success', function () {
-    return view('done');
-});
-
-
-Route::post('/pay',[PaymentController::class, 'handlePayment']);
+Route::post('/pay',[PaymentController::class, 'handlePayment'])->name('handlePayment');
